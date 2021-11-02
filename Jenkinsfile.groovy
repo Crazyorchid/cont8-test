@@ -24,6 +24,7 @@ pipeline {
                 ls
                 cd server
                 mvn clean package -Dmaven.test.skip=true
+                cd ..
                 # 开始编译nodejs代码  这里是vue
                 cd client && npm install
                 npm run build
